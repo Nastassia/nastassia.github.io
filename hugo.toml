@@ -1,0 +1,4 @@
+baseURL = 'http://nastassia.github.io/'
+languageCode = 'en-us'
+title = 'Nas Dev'
+theme = 'risotto'

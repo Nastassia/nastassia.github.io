@@ -1,7 +1,7 @@
 baseURL = 'http://nastassia.github.io/'
 languageCode = 'en-us'
-title = 'NastassiaDev'
-theme = 'cactus'
+title = 'NastassiaDotDev'
+theme = ''
 #paginate = 3
 copyright = "Nastassia C."
 enableInlineShortcodes = true

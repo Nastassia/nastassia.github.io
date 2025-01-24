@@ -7,3 +7,6 @@
 [submodule "themes/terminal"]
 	path = themes/terminal
 	url = git@github.com:Nastassia/terminal-hugo-theme.git
+[submodule "themes/hugo-theme-reimu"]
+	path = themes/hugo-theme-reimu
+	url = git@github.com:Nastassia/hugo-theme-reimu.git

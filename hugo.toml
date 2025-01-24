@@ -1,0 +1,102 @@
+baseURL = 'http://nastassia.github.io/'
+languageCode = 'en-us'
+title = 'NastassiaDotDev'
+theme = 'hugo-theme-reimu'
+#paginate = 3
+copyright = "Nastassia C."
+enableInlineShortcodes = true
+
+# Automatically add content sections to main menu
+sectionPagesMenu = "main"
+
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+[params]
+
+  colortheme = "light" # dark, light, white, or classic
+  rss = false # generate rss feed. default value is false
+  googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+  showAllPostsArchive = false # default
+
+  # Home page settings
+  description = "Adventures of an autodidactic Systems Engineer."
+  mainSection = "posts" # your main section
+  showAllPostsOnHomePage = false # default
+  postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+  tagsOverview = true # show tags overview by default.
+  showProjectsList = true # show projects list by default (if projects data file exists).
+  projectsUrl = "https://github.com/Nastassia" # title link for projects list
+
+  css = ["css/custom.css"]
+
+  # https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+  dateFormat = "2006-01-02" # default
+
+  # Post page settings
+  show_updated = true # default
+  showReadTime = true # default
+
+  [params.comments]
+    enabled = false # default
+    engine = "disqus" # only disqus, utterances, and cactus_comments is supported
+    #[params.comments.utterances]
+    #  repo = "<github_username>/<github_reponame>"
+    #  label = "NastassiaDev" # you can use however you want to label your name in your repo's issues
+    #  theme = "github-dark"
+    #[params.comments.cactuscomments]
+    #  siteName = "your_cactus_comments_sitename" # see https://cactus.chat/ on how to register your site name
+      #serverUrl = "" # Defaults to https://matrix.cactus.chat:8448 (Cactus Chat public server)
+      #serverName = "" # Defaults to cactus.chat
+
+  # the value of name should be an valid font awesome icon name (brands type)
+  # https://fontawesome.com/icons?d=gallery&s=brands
+  [[params.social]]
+    name = "github"
+    link = "https://github.com/Nastassia"
+  [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/nastassiacarmona"
+  [[params.social]]
+    name = "email"
+    link = "nastassiacarmona@gmail.com"  # no need for "mailto:" in the head
+
+[markup]
+    # Table of contents
+    # Add toc = true to content front matter to enable
+    [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 4
+    ordered    = false
+
+[menu]
+
+    [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.main]]
+    name = "Posts"
+    url = "/posts"
+    weight = 2
+
+    [[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = 3
+
+    [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 4    
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+# For hugo >= 0.60.0, enable inline HTML
+[markup.goldmark.renderer]
+unsafe = true

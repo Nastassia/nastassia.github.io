@@ -2,7 +2,7 @@ baseURL: 'https://mywebsite.com/'
 languageCode: 'en-us'
 title: 'My Website'
 theme: 'terminal'
-timeZone: "Asia/Kolkata"
+timeZone: "America/New_York"
 menus:
   main:
     - identifier: about

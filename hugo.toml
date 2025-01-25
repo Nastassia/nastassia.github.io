@@ -69,6 +69,9 @@ ignoreErrors = ["error-remote-getjson"]
     startLevel = 2
     endLevel   = 4
     ordered    = false
+    [markup.highlight]
+    guessSyntax = true
+    noClasses = false
 
 [menu]
 

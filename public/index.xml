@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>First on NastassiaDotDev</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in First on NastassiaDotDev</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>Nastassia C.</copyright>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Highly motivated technology enthusiast with a deep interest in: Systems Engineering, IT, DevOps and SRE practices and all that entails. 15 years in the industry.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

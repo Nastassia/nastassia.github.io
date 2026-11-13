@@ -11,8 +11,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 
 defaults:
@@ -41,10 +39,6 @@ jobs:
 
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
 
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
@@ -86,11 +80,6 @@ jobs:
           path: |
             ${{ runner.temp }}/hugo_cache
           key: ${{ steps.cache-restore.outputs.cache-primary-key }}
-          
-      - name: Configure GitHub Pages
-        if: github.event_name != 'pull_request'
-        id: pages
-        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
@@ -103,6 +92,7 @@ jobs:
     if: >-
       github.event_name != 'pull_request' &&
       github.ref == 'refs/heads/main'
+
     needs: build
     runs-on: ubuntu-latest
  
@@ -119,7 +109,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-      steps:
-        - name: Deploy to GitHub Pages
-          id: deployment
-          uses: actions/deploy-pages@v4
+    steps:
+    - name: Configure GitHub Pages
+      uses: actions/configure-pages@v5
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4

@@ -98,7 +98,6 @@ jobs:
         with:
           path: ./public
 
-  # Deployment job
   deploy:
     name: Deploy production
     if: >-
@@ -119,8 +118,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      runs-on: ubuntu-latest
-      needs: build
 
       steps:
         - name: Deploy to GitHub Pages
